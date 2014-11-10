@@ -1,7 +1,13 @@
-
+/*	
 chrome.tabs.query({active : true,
-	url: "http://www.facebook.com"
+	url: *facebook.com 
 }, function(){
-	alert("facebook tab is active");
+	console.log("facebook tab is active");
 }
-	)
+	);
+*/
+
+var callback = function(historyItem){
+	alert("was onVisited" + historyItem);
+}
+chrome.history.onVisited.addListener(function callback)
