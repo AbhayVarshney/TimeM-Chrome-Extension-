@@ -12,6 +12,6 @@
 		"default_icon": "icon.png",
 		"default_popup": "mypopup.html"
 	},
-	"background": {"script": "background.js"}
+	"background": {"script": "history.js"}
 
 }
