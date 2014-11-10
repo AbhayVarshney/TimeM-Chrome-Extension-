@@ -4,7 +4,8 @@
 	"manifest_version": 2,
 	"options_page": "options.html",
 	"permissions": [
-          "history"
+          "history",
+          "tabs"
         ],
 	"description": "This is a short description for our chrome extension",
 	"browser_action": {
