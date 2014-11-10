@@ -2,6 +2,7 @@
 
 <html>
 	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<style type = "text/css">
 			body {
 				margin:0px;
@@ -15,10 +16,34 @@
 				max-height: 700px;
 			}
 		</style>
+		<script>
+		var showHistory = function(){
+			chrome.history.search({
+	        'text': '',                // Return every history item....
+	        'maxResults': 2,  // Have to specify something, so why not a billion?
+	        'startTime': 0             // For some reason more results are returned when giving
+	                                   // a startTime, so ask for everything since the epoch
+		    },
+		    function(historyItems) {
+		        // For each history item, get details on all visits.
+		        for (var i = 0; i < historyItems.length; ++i) {
+		            var url = historyItems[i].url;
+		            var p = "<p>" + url + "</p>";
+		            $("#historyitems").appendChild(p);
+		        }
+		    }
+		    );
+		};
+		 
+
+		</script>
 	</head>
 	<body>
 		<div class= "popupContainerDiv">
 			Welcome to TimeM
+			<button type="button" onclick="showHistory()">Show History</button>
+			<div id="historyitems"></div>
 		</div> 
+
 	</body>
 </html>
