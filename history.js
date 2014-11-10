@@ -1,13 +1,21 @@
-/*	
+chrome.history.onVisited.addListener(function(result){
+	alert(result);
+});
+
+/*
 chrome.tabs.query({active : true,
-	url: *facebook.com 
+	url: "*.google.com*"
 }, function(){
-	console.log("facebook tab is active");
+	alert("google tab is active");
 }
-	);
-*/
+	);*/
 
 var callback = function(historyItem){
-	alert("was onVisited" + historyItem);
+	console.log(historyItem);
+	alert(historyItem);
 }
-chrome.history.onVisited.addListener(function callback)
+
+chrome.history.onVisited.addListener(function(result){
+	alert(result);
+})
+
