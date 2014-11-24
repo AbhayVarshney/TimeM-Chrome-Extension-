@@ -1,17 +1,21 @@
 {
 	"name": "TimeM",
+	"description": "Tracks time in order to make people more efficient",
 	"version": "1.0",
 	"manifest_version": 2,
 	"options_page": "options.html",
 	"permissions": [
           "history",
-          "tabs"
+          "tabs",
+          "activeTab"
         ],
 	"description": "This is a short description for our chrome extension",
+	"background": {
+	    "scripts": ["history.js"],
+	    
+  	},
 	"browser_action": {
-		"default_icon": "icon.png",
-		"default_popup": "mypopup.html"
-	},
-	"background": {"script": "history.js"}
+    	"default_title": "Make this page red"
+  	}
 
 }
