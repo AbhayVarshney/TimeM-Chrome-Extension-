@@ -1,4 +1,3 @@
-
 /*
 {
 	"name": "TimeM",
@@ -7,36 +6,22 @@
 	"manifest_version": 2,
 	"options_page": "options.html",
 	"permissions": [
-          "history",
-          "tabs",
-          "activeTab"
+          "history"
         ],
 	"description": "This is a short description for our chrome extension",
 	"background": {
 	    "scripts": ["history.js"],
-	    
-  	}
-	"browser_action": {
-    	"default_title": "Make this page red"
-  	}
-
+	}
 }
 */
 {
   "name": "TimeM",
+  "version": "1.2",
   "description": "Tracks time in order to make people more efficient",
-  "version": "2.0",
-  "permissions": [
-    "activeTab",
-    "history",
-    "tabs"
-  ],
-  "background": {
-    "scripts": ["history.js"],
-    "persistent": false
-  },
+  "permissions": ["topSites"],
   "browser_action": {
-    "default_title": "Make this page red"
+    "default_icon": "icon.png",
+    "default_popup": "mypopup.html"
   },
   "manifest_version": 2
 }
