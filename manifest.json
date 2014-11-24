@@ -1,3 +1,5 @@
+
+/*
 {
 	"name": "TimeM",
 	"description": "Tracks time in order to make people more efficient",
@@ -13,9 +15,28 @@
 	"background": {
 	    "scripts": ["history.js"],
 	    
-  	},
+  	}
 	"browser_action": {
     	"default_title": "Make this page red"
   	}
 
+}
+*/
+{
+  "name": "TimeM",
+  "description": "Tracks time in order to make people more efficient",
+  "version": "2.0",
+  "permissions": [
+    "activeTab",
+    "history",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["history.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Make this page red"
+  },
+  "manifest_version": 2
 }
