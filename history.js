@@ -4,6 +4,9 @@
 
 // Event listener for clicks on links in a browser action popup.
 // Open the link in a new tab of the current window.
+$(document).ready(function(){
+Parse.initialize("LcQYRvseB9ExXGIherTt1v2pw2MVzPFwVXfigo11", "F5enB5XfOfqo4ReAItZCkJVxOY76hoveZrOMwih9");
+
 function onAnchorClick(event) {
   chrome.tabs.create({ url: event.srcElement.href });
   return false;
@@ -13,6 +16,7 @@ function onAnchorClick(event) {
 // browser action popup.
 function buildPopupDom(mostVisitedURLs) {
   var popupDiv = document.getElementById('mostVisited_div');
+  //Adds links to the pop up list
   var ol = popupDiv.appendChild(document.createElement('ol'));
 
   for (var i = 0; i < mostVisitedURLs.length; i++) {
@@ -25,3 +29,8 @@ function buildPopupDom(mostVisitedURLs) {
 }
 
 chrome.topSites.get(buildPopupDom);
+
+
+
+
+}

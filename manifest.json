@@ -18,6 +18,7 @@
   "name": "TimeM",
   "version": "1.2",
   "description": "Tracks time in order to make people more efficient",
+  "options_page": "options.html",
   "permissions": ["topSites"],
   "browser_action": {
     "default_icon": "icon.png",
