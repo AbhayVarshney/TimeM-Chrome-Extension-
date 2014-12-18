@@ -1,8 +1,38 @@
 <!DOCTYPE HTML>
 <html>
-  <body>
-    <h2>Most Visited:</h2>
-    <div id='mostVisited_div'></div>
-    <script src='history.js'></script>
-  </body>
+	<head>
+		<link href="components/paper-input/paper-input.html" rel="import">
+		<!-- IonIcons -->
+    	<link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+    	<script type="text/javascript" src="mypopup.js"> </script>
+    	<style type="text/css">
+    		body {
+    			height: 240px;
+    			width: 120px;
+    			font-weight: 300;
+    			-webkit-font-smoothing: antialiased;
+    			font-family: "Helvetica Neue",Helvetica,"Myriad Pro","Lucida Grande",sans-serif;
+    			font-size: 15px;
+    		}
+    	</style>
+	</head>
+	<body>
+		<form name = "myform">
+		    <p>
+		    	<center> <i class ="ion-locked" style= "font-size: 30px;"></i> </center> 
+				<center> Login: </center>
+				<input label="Email" id = "username" type= "text" name= " username" placeholder = "PaulG" style = "position: absolute; top: 75px; width: 110px; left: 9px; padding-left: 5px;">
+				<br/> <br/> 
+				<center> Password: </center>
+				<input label="***********" id = "password" type = "password" name = "pword" placeholder = "********" style = "position: absolute; top: 130px; width: 110px; left: 9px; padding-left: 5px;">
+				<input id="signIn" type="button" value="Sign In" name="Submit" style = "position: absolute; top: 170px; left: 7px; width: 120px;">
+				<br/> <br/> <br/> <br/> 
+		    </p>
+		</form>
+	   	<a class = "signUp" href="registration.html"><center>Sign Up!</center></a>
+	<!-- Don't show this
+		<div id='mostVisited_div'></div>
+		<script src='history.js'></script>
+	-->
+	</body>
 </html>
