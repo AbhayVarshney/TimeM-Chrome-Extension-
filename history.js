@@ -34,3 +34,4 @@ chrome.topSites.get(buildPopupDom);
 
 
 }
+
