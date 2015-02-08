@@ -1,4 +1,12 @@
-$(function() {
+chrome.tabs.getSelected(null, function(tab) {
+    document.getElementById('currentLink').innerHTML = tab.url;
+});
+
+
+
+
+
+/*$(function() {
 
 	var BG = chrome.extension.getBackgroundPage();
 
@@ -12,7 +20,7 @@ $(function() {
 	});
 
 })
-
+*/
 
 //PARSE CODE NOT WORKING
 					//
