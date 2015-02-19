@@ -82,7 +82,7 @@ $("#signIn").on('click', function(e){
 			success: function(user) {
 			// Do stuff after successful login.
 				document.cookie="username=" + username;
-				window.location.href = "assignments.html";
+				window.location.href = "http://timem-teamsnap.rhcloud.com/assignments.html";
 
 			}, error: function(user, error) {
 				// The login failed. Check error to see why.
