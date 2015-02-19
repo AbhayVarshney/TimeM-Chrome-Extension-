@@ -56,6 +56,8 @@ Parse.initialize("LcQYRvseB9ExXGIherTt1v2pw2MVzPFwVXfigo11", "F5enB5XfOfqo4ReAIt
 })
 */
 
+
+//Gathers username and password
 $("#signIn").on('click', function(e){
 		e.preventDefault();
 		//stores values of username and password
@@ -71,22 +73,23 @@ $("#signIn").on('click', function(e){
 		authenticateUser(username, password);
 	});
 
-// 	/* Adding Username */
-// 	var makeAssignment,getAssignment;
-// 	//function to find an existing user
-// 	var authenticateUser = function(username, password){
-// 		Parse.User.logIn(username, password, {
-// 			success: function(user) {
-// 			// Do stuff after successful login.
-// 				document.cookie="username=" + username;
-// 				window.location.href = "assignments.html";
+//Validates user
+	/* Adding Username */
+	var makeAssignment,getAssignment;
+	//function to find an existing user
+	var authenticateUser = function(username, password){
+		Parse.User.logIn(username, password, {
+			success: function(user) {
+			// Do stuff after successful login.
+				document.cookie="username=" + username;
+				window.location.href = "assignments.html";
 
-// 			}, error: function(user, error) {
-// 				// The login failed. Check error to see why.
-// 				alert("Incorrect password or username");
-// 			}
-// 		});
-// 	};
+			}, error: function(user, error) {
+				// The login failed. Check error to see why.
+				alert("Incorrect password or username");
+			}
+		});
+	};
 
 // 	var newUser = function (username, password){
 // 		var user = new Parse.User();
