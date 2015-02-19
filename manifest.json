@@ -4,7 +4,8 @@
   "version": "0.7",
   "permissions": [
     "tabs",
-    "history"
+    "history".
+    "https://ajax.googleapis.com/"
   ],
   "background": {
     "scripts": ["background.js"]
@@ -14,6 +15,11 @@
     "default_title": "TimeM is at work",
     "default_popup": "mypopup.html"
   },
+  "content_scripts": [
+    {
+      "js": ["jquery-2.1.1.js", "mypopup.js"]
+    }
+  ],
   "manifest_version": 2  
 }
 
