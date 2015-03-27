@@ -58,7 +58,7 @@ Parse.initialize("LcQYRvseB9ExXGIherTt1v2pw2MVzPFwVXfigo11", "F5enB5XfOfqo4ReAIt
 
 
 //Gathers username and password
-$("#signIn").on('click', function(e){
+function signIn(){
 		e.preventDefault();
 		//stores values of username and password
 		var username = $("#username").val();
