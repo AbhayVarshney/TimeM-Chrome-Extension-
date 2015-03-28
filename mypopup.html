@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<link href="components/paper-input/paper-input.html" rel="import">
+		
 		<!-- IonIcons -->
     	<link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+    	<script type="text/javascript" src="parse-1.2.19.min.js"></script>
     	<script src="jquery-2.1.1.js"></script>
     	<script type="text/javascript" src="mypopup.js"> </script>
+    	<style type="text/css" src="login.css"></style>
     	<style type="text/css">
     		body {
     			height: 240px;
@@ -23,14 +25,14 @@
 		    	<center> <i class ="ion-locked" style= "font-size: 30px;"></i> </center> 
 				<center> Login: </center>
 				<!-- Id is -->
-				<input label="Email" id = "username" type= "text" name= " username" placeholder = "PaulG" style = "position: absolute; top: 75px; width: 110px; left: 9px; padding-left: 5px;">
+				<input label="Email" id = "txtuname" type= "text" name= " username" placeholder = "PaulG" style = "position: absolute; top: 75px; width: 110px; left: 9px; padding-left: 5px;">
 				<br/> <br/> 
 
 				<center> Password: </center>
 
-				<input label="***********" id = "password" type = "password" name = "pword" placeholder = "********" style = "position: absolute; top: 130px; width: 110px; left: 9px; padding-left: 5px;">
+				<input label="***********" id = "txtpword" type = "password" name = "pword" placeholder = "********" style = "position: absolute; top: 130px; width: 110px; left: 9px; padding-left: 5px;">
 				
-				<input id="signIn" type="button" value="Sign In" name="Submit" style = "position: absolute; top: 170px; left: 7px; width: 120px;">
+				<input id="signIn" onClick= "signIn()" type="button" value="Sign In" name="Submit" style = "position: absolute; top: 170px; left: 7px; width: 120px;">
 
 				<br/> <br/> <br/> <br/> 
 		    </p>

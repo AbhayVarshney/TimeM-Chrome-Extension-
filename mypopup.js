@@ -1,3 +1,10 @@
+/* IN PROGRESS
+	Google has a Content Security Policy which prevents inline script and many other features. 
+	I left off with trying to get the username and password from the HTML document. 
+	According to Google Documentation we need to get add an event listner to get these. 
+	As of now I have tried using document.getElementbyID
+*/
+
 $(document).ready(function(){
 	//Intializes Parse
 	Parse.initialize("LcQYRvseB9ExXGIherTt1v2pw2MVzPFwVXfigo11", "F5enB5XfOfqo4ReAItZCkJVxOY76hoveZrOMwih9");
@@ -5,6 +12,10 @@ $(document).ready(function(){
 	//Function is called when sign in button is clicked
 	$("#signIn").on('click', function(e){
 		e.preventDefault();
+		var pword = document.getElementById("txtpword");
+		console.log(pword);
+
+		/*
 		//stores values of username and password
 		var username = $("#username").val();
 		var password = $("#password").val();
@@ -18,9 +29,9 @@ $(document).ready(function(){
 		}
 
 		authenticateUser(username, password);
+	});*/
 	});
-
-
+/*
 	//Validates user
 	//function to find an existing user
 	function authenticateUser(username, password){
@@ -42,5 +53,6 @@ $(document).ready(function(){
 	chrome.tabs.getSelected(null, function(tab) {
 		document.getElementById('currentLink').innerHTML = tab.url;
 	});
+*/
 
 });
